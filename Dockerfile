@@ -17,13 +17,15 @@ RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y build-essential git vim wget flex && \
+  apt-get install -y build-essential git vim wget flex supervisor && \
+  mkdir -p /var/log/supervisor && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
+COPY root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Install Golang.
 RUN \
@@ -77,4 +79,5 @@ EXPOSE 8080
 WORKDIR $GOPATH/src
 
 # Define default command.
-CMD ["restweb", "run", "GoOnlineJudge"]
+#CMD ["restweb", "run", "GoOnlineJudge"]
+CMD ["/usr/bin/supervisord"]
