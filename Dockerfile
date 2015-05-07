@@ -25,7 +25,7 @@ RUN \
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
-COPY root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Install Golang.
 RUN \
