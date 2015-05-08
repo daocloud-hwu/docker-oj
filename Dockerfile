@@ -25,7 +25,7 @@ RUN \
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
-ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+#ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Install Golang.
 RUN \
@@ -79,4 +79,5 @@ WORKDIR $GOPATH/src
 
 # Define default command.
 #CMD ["restweb", "run", "GoOnlineJudge"]
-CMD ["/usr/bin/supervisord"]
+#CMD ["/usr/bin/supervisord"]
+CMD ["bash", "/home/acm/go/src/start.sh"]
