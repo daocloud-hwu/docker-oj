@@ -1,4 +1,3 @@
-#!/bin/sh
 export GOPATH=/home/acm/go
 export GOROOT=/goroot
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
