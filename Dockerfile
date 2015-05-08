@@ -34,7 +34,7 @@ ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
 #ADD root/start.sh /home/acm/go/src/start.sh
-ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD root/supervisord.conf /etc/supervisord.conf
 
 # Set environment variables for Golang.
 ENV GOROOT /goroot
@@ -80,5 +80,5 @@ WORKDIR $GOPATH/src
 
 # Define default command.
 #CMD ["restweb", "run", "GoOnlineJudge"]
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
 #CMD ["bash", "/home/acm/go/src/start.sh"]
