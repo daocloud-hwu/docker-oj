@@ -21,12 +21,6 @@ RUN \
   mkdir -p /var/log/supervisor && \
   rm -rf /var/lib/apt/lists/*
 
-# Add files.
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
-#ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 # Install Golang.
 RUN \
   mkdir -p /goroot && \
@@ -34,6 +28,13 @@ RUN \
   tar xzf go1.4.2.linux-amd64.tar.gz && \
   cp -r go/* /goroot/ && \
   mkdir -p /home/acm/go/src /home/acm/go/pkg /home/acm/go/bin
+
+# Add files.
+ADD root/.bashrc /root/.bashrc
+ADD root/.gitconfig /root/.gitconfig
+ADD root/.scripts /root/.scripts
+ADD root/start.sh /home/acm/go/src/start.sh
+#ADD root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Set environment variables for Golang.
 ENV GOROOT /goroot
