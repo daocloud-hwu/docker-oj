@@ -13,11 +13,11 @@ This repository contains **Dockerfile** of [GoOnlineJudge](https://github.com/ZJ
 
 2. Download [automated build](https://registry.hub.docker.com/u/clarkzjw/docker-oj/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull clarkzjw/docker-oj`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="docker-oj" github.com/JinweiClarkChao/dockerfile-oj`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="clarkzjw/docker-oj" github.com/JinweiClarkChao/dockerfile-oj`)
    
 ### Usage
 
-    docker run -it -p <host-ip>:8080 docker-oj
+    docker run -it -p <host-ip>:8080 clarkzjw/docker-oj
 
 ### Known issues
 
