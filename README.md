@@ -3,6 +3,8 @@ dockerfile-oj
 
 This repository contains **Dockerfile** of [GoOnlineJudge](https://github.com/ZJGSU-Open-Source/GoOnlineJudge) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/clarkzjw/docker-oj/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
+[**Demo**](http://clarkzjw-oj.daoapp.io/)
+
 ### Base Docker Image
 
 * [ubuntu](https://registry.hub.docker.com/_/ubuntu/)
