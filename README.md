@@ -11,14 +11,14 @@ This repository contains **Dockerfile** of [GoOnlineJudge](https://github.com/ZJ
 
 ### Installation
 
-1. Install [Docker](https://docs.docker.com/installation/#installation).
++ Install [Docker](https://docs.docker.com/installation/#installation).
 
-2. Clone this repo
++ Clone this repo
 ```bash
 git clone https://github.com/ZJGSU-Open-Source/docker-oj.git
 ```
 
-3. Build an image from Dockerfile
++ Build an image from Dockerfile
 ```bash
 docker build -t="docker-oj" .
 ```
