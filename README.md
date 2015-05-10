@@ -21,4 +21,4 @@ This repository contains **Dockerfile** of [GoOnlineJudge](https://github.com/ZJ
 
 ### Known issues
 
-+ [GoOnlineJudge](https://github.com/ZJGSU-Open-Source/GoOnlineJudge)'s conponent [RunServer](https://github.com/ZJGSU-Open-Source/RunServer) does not support **x64** systems yet. Track this [issue](https://github.com/ZJGSU-Open-Source/RunServer/issues/4).Therefore OJ in container actually **can** run but **connot** judge submits yet. 
++ [GoOnlineJudge](https://github.com/ZJGSU-Open-Source/GoOnlineJudge)'s component [RunServer](https://github.com/ZJGSU-Open-Source/RunServer) does not support **x64** systems yet. Track this [issue](https://github.com/ZJGSU-Open-Source/RunServer/issues/4).Therefore OJ in container actually **can** run but **connot** judge submits yet. 
