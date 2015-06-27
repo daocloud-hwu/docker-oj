@@ -46,7 +46,7 @@ RUN \
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
   apt-get update && \
   apt-get install -y mongodb && \
-  mkdir -p /home/acm/Data && \
+  mkdir -p $GOPATH/Data && \
   rm -rf /var/lib/apt/lists/*
 
 # Get OJ Source Code.
@@ -54,6 +54,7 @@ RUN \
   mkdir -p $GOPATH/src/ProblemData && \
   mkdir -p $GOPATH/src/run && \
   mkdir -p $GOPATJ/src/log && \
+  mkdir -p $GOPATH/src/GoOnlineJudge/log && \
   go get gopkg.in/mgo.v2 && \
   go get github.com/djimenez/iconv-go && \
   git clone https://github.com/ZJGSU-Open-Source/GoOnlineJudge.git $GOPATH/src/GoOnlineJudge && \
