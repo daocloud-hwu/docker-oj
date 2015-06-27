@@ -54,7 +54,6 @@ RUN \
   mkdir -p $GOPATH/src/ProblemData && \
   mkdir -p $GOPATH/src/run && \
   mkdir -p $GOPATJ/src/log && \
-  mkdir -p $GOPATH/src/GoOnlineJudge/log && \
   go get gopkg.in/mgo.v2 && \
   go get github.com/djimenez/iconv-go && \
   git clone https://github.com/ZJGSU-Open-Source/GoOnlineJudge.git $GOPATH/src/GoOnlineJudge && \
@@ -64,6 +63,7 @@ RUN \
 
 # Build OJ
 RUN \
+  mkdir -p $GOPATH/src/GoOnlineJudge/log && \
   cd $GOPATH/src/restweb && \
   cd restweb && \
   go install && \
